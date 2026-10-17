@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🤖 AgenticCommerce（智能跨境电商融合平台）
+# 🤖 智能跨境电商一站式平台
 
 ### 从商品分析到多平台刊登，多个 AI Agent 协作完成视觉内容生产 —— **你能实时看到每个 Agent 的思考与协作过程**
 
@@ -438,7 +438,20 @@ docker ps --filter "name=cbcf"
 
 本项目基于 [Apache License 2.0](LICENSE) 开源。
 
+
 ---
+
+参考项目：
+
+ GitHub 仓库：https://github.com/haowlai/AgenticCommerce
+
+  GitHub 仓库：https://github.com/liangdabiao/amazon-sorftime-research-MCP-skill
+
+  GitHub 仓库：https://github.com/adongwanai/AgentGuide
+
+
+
+ ---
 
 <div align="center">
 
