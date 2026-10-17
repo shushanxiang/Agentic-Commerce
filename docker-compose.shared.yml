@@ -1,0 +1,40 @@
+# ============================================================
+# 智能跨境电商融合平台 — 共享模式（依赖 ait-share-docker）
+# 前提: 先启动共享基础设施
+#   docker compose -f D:\ait-code\ait-share-docker\docker-compose.yml up -d
+# 本项目启动:
+#   docker compose -f docker-compose.shared.yml up -d
+# ============================================================
+
+services:
+  # ── 后端 API ──
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cbcf-app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      # 应用不读 DATABASE_URL，连接串由 POSTGRES_* 拼接，故此处需覆盖 POSTGRES_HOST
+      POSTGRES_HOST: host.docker.internal
+      POSTGRES_PORT: "5432"
+      REDIS_URL: redis://host.docker.internal:6379/0
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./output:/app/output
+
+  # ── 前端 (Nginx) ──
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: cbcf-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - app
