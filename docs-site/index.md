@@ -22,8 +22,3 @@
 | AI 会话追踪 | Token 消耗、费用估算、按模型/Agent 分解的使用分析 |
 | 认证与多租户 | API Token (SHA256 + Scope) + tenant_id 数据隔离 |
 
-## 更多资源
-
-- [API 文档](http://localhost:8000/docs) — FastAPI 自动生成的交互式 API 文档
-- [CHANGELOG](https://github.com/user/cbcf-platform/blob/master/CHANGELOG.md) — 版本变更记录
-- [CONTRIBUTING](https://github.com/user/cbcf-platform/blob/master/CONTRIBUTING.md) — 贡献指南

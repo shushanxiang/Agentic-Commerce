@@ -12,8 +12,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/user/cbcf-platform.git
-cd cbcf-platform
+git clone https://github.com/shushanxiang/Agentic-Commerce.git 
+cd Agentic-Commerce
 
 # 配置环境变量
 cp .env.example .env
@@ -41,8 +41,8 @@ Docker Compose 包含以下服务：
 ### 后端
 
 ```bash
-git clone https://github.com/user/cbcf-platform.git
-cd cbcf-platform
+git clone https://github.com/shushanxiang/Agentic-Commerce.git
+cd Agentic-Commerce
 
 # 安装 Python 依赖（使用 uv）
 uv sync
